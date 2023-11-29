@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingWiki_Web", "CodingWiki_Web\CodingWiki_Web.csproj", "{5CB18EA0-58A9-4AEB-889C-730060054F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingWiki_Web", "CodingWiki_Web\CodingWiki_Web.csproj", "{5CB18EA0-58A9-4AEB-889C-730060054F0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingWiki_DataAccess", "CodingWiki_DataAccess\CodingWiki_DataAccess.csproj", "{33F3EC79-6CEB-41DE-94C6-26F4612BB80A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingWiki_Model", "CodingWiki_Model\CodingWiki_Model.csproj", "{7323C265-7834-4565-A8E5-691E538B4327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingWiki_Console", "CodingWiki_Console\CodingWiki_Console.csproj", "{49F062DA-DC57-4998-8CBD-70B6A1E5ACFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{5CB18EA0-58A9-4AEB-889C-730060054F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CB18EA0-58A9-4AEB-889C-730060054F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CB18EA0-58A9-4AEB-889C-730060054F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33F3EC79-6CEB-41DE-94C6-26F4612BB80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33F3EC79-6CEB-41DE-94C6-26F4612BB80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33F3EC79-6CEB-41DE-94C6-26F4612BB80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33F3EC79-6CEB-41DE-94C6-26F4612BB80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7323C265-7834-4565-A8E5-691E538B4327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7323C265-7834-4565-A8E5-691E538B4327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7323C265-7834-4565-A8E5-691E538B4327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7323C265-7834-4565-A8E5-691E538B4327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F062DA-DC57-4998-8CBD-70B6A1E5ACFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F062DA-DC57-4998-8CBD-70B6A1E5ACFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F062DA-DC57-4998-8CBD-70B6A1E5ACFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F062DA-DC57-4998-8CBD-70B6A1E5ACFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
