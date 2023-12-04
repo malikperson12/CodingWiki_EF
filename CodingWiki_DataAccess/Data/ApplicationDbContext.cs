@@ -17,5 +17,10 @@ namespace CodingWiki_DataAccess.Data
             //Sensitive information
             optionsBuilder.UseSqlServer("Server=MPSPC2022\\MSSQLSERVER02;Database=CodingWiki;TrustServerCertificate=True;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>().Property(u => u.Price).HasPrecision(10, 5);
+        }
     }
 }
