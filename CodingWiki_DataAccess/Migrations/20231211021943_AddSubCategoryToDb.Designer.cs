@@ -4,6 +4,7 @@ using CodingWiki_DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CodingWikiDataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231211021943_AddSubCategoryToDb")]
+    partial class AddSubCategoryToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,40 +62,37 @@ namespace CodingWikiDataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdBook"));
 
                     b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasPrecision(10, 5)
                         .HasColumnType("decimal(10,5)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdBook");
 
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("CodingWiki_Model.Models.Category", b =>
+            modelBuilder.Entity("CodingWiki_Model.Models.Genre", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("GenreId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GenreId"));
 
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Name");
+                    b.Property<int>("Display")
+                        .HasColumnType("int");
 
-                    b.HasKey("CategoryId");
+                    b.Property<string>("GenreName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Categories");
+                    b.HasKey("GenreId");
+
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("CodingWiki_Model.Models.Publisher", b =>
